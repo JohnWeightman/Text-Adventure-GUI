@@ -1,0 +1,7 @@
+C:\Users\Istalri Skolir\Documents\Visual Studio Projects\Text-Adventure-GUI\Text Adventure GUI\bin\Debug\Text Adventure GUI.exe.config
+C:\Users\Istalri Skolir\Documents\Visual Studio Projects\Text-Adventure-GUI\Text Adventure GUI\bin\Debug\Text Adventure GUI.exe
+C:\Users\Istalri Skolir\Documents\Visual Studio Projects\Text-Adventure-GUI\Text Adventure GUI\bin\Debug\Text Adventure GUI.pdb
+C:\Users\Istalri Skolir\Documents\Visual Studio Projects\Text-Adventure-GUI\Text Adventure GUI\obj\Debug\Text Adventure GUI.csprojAssemblyReference.cache
+C:\Users\Istalri Skolir\Documents\Visual Studio Projects\Text-Adventure-GUI\Text Adventure GUI\obj\Debug\Text Adventure GUI.csproj.CoreCompileInputs.cache
+C:\Users\Istalri Skolir\Documents\Visual Studio Projects\Text-Adventure-GUI\Text Adventure GUI\obj\Debug\Text Adventure GUI.exe
+C:\Users\Istalri Skolir\Documents\Visual Studio Projects\Text-Adventure-GUI\Text Adventure GUI\obj\Debug\Text Adventure GUI.pdb
