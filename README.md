@@ -1,8 +1,7 @@
 ISTALRI SKOLIR PRODUCTIONS
 
 # Text-Adventure-GUI
-* Working Progress* Draws boxes to a console with different player stats, fight orders, story text, etc. Has public functions to update
-display
+Draws boxes to a console with different player stats, fight orders, story text, etc. Has public functions to update the display
 
 This code utilizes a 'Draw'class made by Ryan S White, link to the original page: https://www.codeproject.com/Tips/1091249/Drawing-a
 Rectangle-in-the-Csharp-Console
