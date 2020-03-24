@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Text_Adventure_GUI
 {
-    public static class Draw
+    public static class Draw///Externally Sourced Class
     {
         /// <summary>
         /// Draws a rectangle in the console using several WriteLine() calls.
