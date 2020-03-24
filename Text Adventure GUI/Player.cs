@@ -8,7 +8,7 @@ namespace Text_Adventure_GUI
 {
     static class Player
     {
-        public static string Name = "Murtagh";
+        public static string Name = "Player";
         public static int Level = 1;
         public static int HP = 90;
         public static int MaxHP = 90;

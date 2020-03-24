@@ -10,8 +10,6 @@ namespace Text_Adventure_GUI
     {
         static void Main(string[] args)
         {
-            Console.SetWindowSize(171, 50);
-            Console.SetBufferSize(172, 51);
             DrawGUI.DrawGUIConsole();
             Console.ReadLine();
         }

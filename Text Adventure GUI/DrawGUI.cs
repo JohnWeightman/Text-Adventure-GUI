@@ -13,6 +13,8 @@ namespace Text_Adventure_GUI
 
         public static void DrawGUIConsole()
         {
+            Console.SetWindowSize(171, 50);
+            Console.SetBufferSize(172, 51);
             Console.Clear();
             DrawBorders();
             DrawPlayersFirstStatsBox();
@@ -22,8 +24,11 @@ namespace Text_Adventure_GUI
             DrawPlayersFifthStatsBox();
             DrawFightOrderBox();
             DrawEnemiesBox();
-            WriteStory();
-            PrintPlayerOptions();
+            UpdateStoryBox(StartDisplay.StartStory);
+            List<string> StartDisplayOptions = StartDisplay.StartOptions;
+            UpdatePlayerOptions(StartDisplayOptions);
+            List<string> StartDisplayEvents = StartDisplay.StartEvents;
+            UpdateEventBox(StartDisplayEvents);
         }
 
         static void DrawBorders()
@@ -34,9 +39,8 @@ namespace Text_Adventure_GUI
             Draw.RectangleFromTop(24, 44, 146, 4, ConsoleColor.Blue);
             Draw.RectangleFromTop(122, 34, 24, 4, ConsoleColor.Blue);
             Draw.RectangleFromTop(61, 9, 85, 39, ConsoleColor.Blue);
-            Console.SetCursorPosition(80, 2);
-            Console.Write("Title");
-            //Draw.Rectangle(22, 17, 1, 5, color: ConsoleColor.Green);
+            Console.SetCursorPosition(74, 2);
+            Console.Write("Text Adventure GUI");
         }
 
         #endregion
@@ -173,7 +177,7 @@ namespace Text_Adventure_GUI
 
         #endregion
 
-        #region Players Fifth Stats Box
+        #region Players Inventory Box
 
         static void DrawPlayersFifthStatsBox()
         {
@@ -214,38 +218,30 @@ namespace Text_Adventure_GUI
         static void DrawFightOrderBox()
         {
             Draw.Rectangle(20, 10, 148, -23, Draw.DrawKind.BelowCursorButKeepCursorLocation, color: ConsoleColor.Red);
-            UpdateFightOrderBox();
+            List<string> StartDisplayList = StartDisplay.StartFightOrder;
+            UpdateFightOrderBox(StartDisplayList);
         }
 
-        public static void UpdateFightOrderBox()
+        public static void UpdateFightOrderBox(List<string> FightOrder)
         {
             ClearFightOrderBox();
-            Console.SetCursorPosition(153, 6);
+            Console.SetCursorPosition(150, 6);
             Console.Write("Fight Order");
-            Console.SetCursorPosition(153, 8);
-            Console.Write("Murtagh");
-            Console.SetCursorPosition(153, 9);
-            Console.Write("Bandit 1");
-            Console.SetCursorPosition(153, 10);
-            Console.Write("Bandit 2");
-            Console.SetCursorPosition(153, 11);
-            Console.Write("Bandit 3");
-            Console.SetCursorPosition(153, 12);
-            Console.Write("Bandit 4");
-            Console.SetCursorPosition(153, 13);
-            Console.Write("Bandit 5");
-            Console.SetCursorPosition(153, 14);
-            Console.Write("Bandit 6");
-            Console.SetCursorPosition(153, 15);
-            Console.Write("Bandit 7");
+            int YPos = 8;
+            foreach(string Character in FightOrder)
+            {
+                Console.SetCursorPosition(150, YPos);
+                Console.Write(Character);
+                YPos += 1;
+            }
         }
 
         static void ClearFightOrderBox()
         {
             for (int YPos = 6; YPos < 16; YPos++)
             {
-                Console.SetCursorPosition(153, YPos);
-                for (int x = 0; x < 15; x++)
+                Console.SetCursorPosition(150, YPos);
+                for (int x = 0; x < 18; x++)
                 {
                     Console.Write(" ");
                 }
@@ -258,44 +254,45 @@ namespace Text_Adventure_GUI
 
         static void DrawEnemiesBox()
         {
-            Draw.Rectangle(20, 10, 148, 10, Draw.DrawKind.BelowCursorButKeepCursorLocation, color: ConsoleColor.Red);
-            Console.SetCursorPosition(155, 17);
-            Console.Write("Enemies");
-            Console.SetCursorPosition(155, 19);
-            Console.Write("Bandit 1");
-            Console.SetCursorPosition(155, 20);
-            Console.Write("Bandit 2");
-            Console.SetCursorPosition(155, 21);
-            Console.Write("Bandit 3");
-            Console.SetCursorPosition(155, 22);
-            Console.Write("Bandit 4");
-            Console.SetCursorPosition(155, 23);
-            Console.Write("Bandit 5");
-            Console.SetCursorPosition(155, 24);
-            Console.Write("Bandit 6");
-            Console.SetCursorPosition(155, 25);
-            Console.Write("Bandit 7");
+            Draw.Rectangle(20, 10, 148, 1, Draw.DrawKind.BelowCursorButKeepCursorLocation, color: ConsoleColor.Red);
+            List<string> StartDisplayList = StartDisplay.StartEnemies;
+            UpdateEnemiesBox(StartDisplayList);
         }
 
-        public static void UpdateEnemiesBox()
+        public static void UpdateEnemiesBox(List<string> Enemies)
         {
-
+            ClearEnemiesBox();
+            Console.SetCursorPosition(150, 17);
+            Console.Write("Enemies");
+            int YPos = 19;
+            foreach(string Enemy in Enemies)
+            {
+                Console.SetCursorPosition(150, YPos);
+                Console.Write(Enemy);
+                YPos += 1;
+            }
         }
 
         static void ClearEnemiesBox()
         {
-
+            for (int YPos = 17; YPos < 26; YPos++)
+            {
+                Console.SetCursorPosition(150, YPos);
+                for (int x = 0; x < 18; x++)
+                {
+                    Console.Write(" ");
+                }
+            }
         }
 
         #endregion
 
         #region Story Box
 
-        public static void WriteStory()
+        public static void UpdateStoryBox(string StoryString)
         {
             ClearStory();
-            string Text = "123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789";
-            List<string> Story = CheckStringLength(Text);
+            List<string> Story = CheckStringLength(StoryString);
             int XPos = 28;
             int YPos = 6;
             foreach (string Line in Story)
@@ -344,6 +341,7 @@ namespace Text_Adventure_GUI
                 else
                 {
                     TextTooLong = !TextTooLong;
+                    Story.Add(Text);
                 }
             }
             return Story;
@@ -365,38 +363,34 @@ namespace Text_Adventure_GUI
 
         #region Player Options Box
 
-        public static void PrintPlayerOptions()
+        public static void UpdatePlayerOptions(List<string> Options)
         {
-            Console.SetCursorPosition(28, 41);
-            Console.Write("1. Option 1");
-            Console.SetCursorPosition(28, 42);
-            Console.Write("2. Option 2");
-            Console.SetCursorPosition(28, 43);
-            Console.Write("3. Option 3");
-            Console.SetCursorPosition(28, 44);
-            Console.Write("4. Option 4");
-            Console.SetCursorPosition(28, 45);
-            Console.Write("5. Option 5");
-            Console.SetCursorPosition(28, 46);
-            Console.Write("6. Option 6");
-            Console.SetCursorPosition(28, 47);
-            Console.Write("7. Option 7");
-            Console.SetCursorPosition(50, 41);
-            Console.Write("1. Option 8");
-            Console.SetCursorPosition(50, 42);
-            Console.Write("2. Option 9");
-            Console.SetCursorPosition(50, 43);
-            Console.Write("3. Option 10");
-            Console.SetCursorPosition(50, 44);
-            Console.Write("4. Option 11");
-            Console.SetCursorPosition(50, 45);
-            Console.Write("5. Option 12");
-            Console.SetCursorPosition(50, 46);
-            Console.Write("6. Option 13");
-            Console.SetCursorPosition(50, 47);
-            Console.Write("7. Option 14");
-            Console.ReadLine();
             ClearPlayerOptions();
+            int YPos = 41;
+            int OptionNum = 1;
+            bool Left = true;
+            foreach(string Option in Options)
+            {
+                if (Left)
+                {
+                    Console.SetCursorPosition(28, YPos);
+                    Console.Write(OptionNum + ". " + Option);
+                    OptionNum += 1;
+                    YPos += 1;
+                    if(YPos > 47)
+                    {
+                        YPos = 41;
+                        Left = !Left;
+                    }
+                }
+                else
+                {
+                    Console.SetCursorPosition(50, YPos);
+                    Console.Write(OptionNum + ". " + Option);
+                    OptionNum += 1;
+                    YPos += 1;
+                }
+            }
         }
 
         static void ClearPlayerOptions()
@@ -404,7 +398,35 @@ namespace Text_Adventure_GUI
             for (int YPos = 41; YPos < 49; YPos++)
             {
                 Console.SetCursorPosition(28, YPos);
-                for (int x = 0; x < 50; x++)
+                for (int x = 0; x < 55; x++)
+                {
+                    Console.Write(" ");
+                }
+            }
+        }
+
+        #endregion
+
+        #region Events Box
+
+        public static void UpdateEventBox(List<string> Events)
+        {
+            ClearEventsBox();
+            int YPos = 40;
+            foreach (string Event in Events)
+            {
+                Console.SetCursorPosition(86, YPos);
+                Console.Write(Event);
+                YPos += 1;
+            }
+        }
+
+        static void ClearEventsBox()
+        {
+            for (int YPos = 40; YPos < 49; YPos++)
+            {
+                Console.SetCursorPosition(86, YPos);
+                for (int x = 0; x < 60; x++)
                 {
                     Console.Write(" ");
                 }
