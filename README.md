@@ -1,4 +1,4 @@
-ISTALRI SKOLIR PRODUCTIONS
+# ISTALRI SKOLIR PRODUCTIONS
 
 # Text-Adventure-GUI
 The code from this project is from the Text-Adventure-Environment project.
