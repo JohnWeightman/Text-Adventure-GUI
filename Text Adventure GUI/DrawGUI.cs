@@ -66,7 +66,7 @@ namespace Text_Adventure_GUI
             Console.Write("AC: " + Player.AC);
         }
 
-        static void ClearPlayersFirstStatsBox() //Clears the Players first stats box
+        public static void ClearPlayersFirstStatsBox() //Clears the Players first stats box
         {
             for (int YPos = 6; YPos < 10; YPos++)
             {
@@ -99,7 +99,7 @@ namespace Text_Adventure_GUI
             Console.Write("CON: " + Player.Con);
         }
 
-        static void ClearPlayersSecondStatsBox() //Clears the Players third stats box
+        public static void ClearPlayersSecondStatsBox() //Clears the Players third stats box
         {
             for (int YPos = 11; YPos < 14; YPos++)
             {
@@ -130,7 +130,7 @@ namespace Text_Adventure_GUI
             Console.Write("LU: " + Player.LU);
         }
 
-        static void ClearPlayersThirdStatsBox() //Clears the Players third stat box
+        public static void ClearPlayersThirdStatsBox() //Clears the Players third stat box
         {
             for (int YPos = 15; YPos < 17; YPos++)
             {
@@ -163,7 +163,7 @@ namespace Text_Adventure_GUI
             Console.Write("Armour: " + Player.Armour);
         }
 
-        static void ClearPlayersFourthStatsBox() //Clear the Players fourth stat box
+        public static void ClearPlayersFourthStatsBox() //Clear the Players fourth stat box
         {
             for (int YPos = 18; YPos < 21; YPos++)
             {
@@ -199,7 +199,7 @@ namespace Text_Adventure_GUI
             }
         }
 
-        static void ClearInventory() //Clears the Players Inventory box
+        public static void ClearInventory() //Clears the Players Inventory box
         {
             for (int YPos = 22; YPos < 48; YPos++)
             {
@@ -236,7 +236,7 @@ namespace Text_Adventure_GUI
             }
         }
 
-        static void ClearFightOrderBox() //Clears the Fight Order box
+        public static void ClearFightOrderBox() //Clears the Fight Order box
         {
             for (int YPos = 6; YPos < 16; YPos++)
             {
@@ -273,7 +273,7 @@ namespace Text_Adventure_GUI
             }
         }
 
-        static void ClearEnemiesBox() //Clears the Enemies box
+        public static void ClearEnemiesBox() //Clears the Enemies box
         {
             for (int YPos = 17; YPos < 26; YPos++)
             {
@@ -289,17 +289,19 @@ namespace Text_Adventure_GUI
 
         #region Story Box
 
-        public static void UpdateStoryBox(string StoryString) //Updates the Story box
+        public static void UpdateStoryBox(List<string> StoryStrings) //Updates the Story box
         {
             ClearStory();
-            List<string> Story = CheckStringLength(StoryString);
-            int XPos = 28;
             int YPos = 6;
-            foreach (string Line in Story)
+            foreach (string StoryString in StoryStrings)
             {
-                Console.SetCursorPosition(XPos, YPos);
-                Console.Write(Line);
-                YPos += 1;
+                List<string> Story = CheckStringLength(StoryString);
+                foreach (string Line in Story)
+                {
+                    Console.SetCursorPosition(28, YPos);
+                    Console.Write(Line);
+                    YPos += 1;
+                }
             }
         }
 
@@ -347,7 +349,7 @@ namespace Text_Adventure_GUI
             return Story;
         }
 
-        static void ClearStory() //Clears the story box
+        public static void ClearStory() //Clears the story box
         {
             for (int YPos = 6; YPos < 39; YPos++)
             {
@@ -393,7 +395,7 @@ namespace Text_Adventure_GUI
             }
         }
 
-        static void ClearPlayerOptions() //Clears the Players Option box
+        public static void ClearPlayerOptions() //Clears the Players Option box
         {
             for (int YPos = 41; YPos < 49; YPos++)
             {
@@ -421,7 +423,7 @@ namespace Text_Adventure_GUI
             }
         }
 
-        static void ClearEventsBox() //Updates the Event box
+        public static void ClearEventsBox() //Updates the Event box
         {
             for (int YPos = 40; YPos < 49; YPos++)
             {

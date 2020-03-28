@@ -13,7 +13,6 @@ namespace Text_Adventure_GUI
         public static int HP = 90;
         public static int MaxHP = 90;
         public static int AC = 18;
-        public static int Pro = 2;
         public static int Str = 18;
         public static int Dex = 16;
         public static int Con = 14;
