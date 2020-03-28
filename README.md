@@ -48,9 +48,10 @@ and 'Armour' variables in the static 'Player' class.
 
 9) ClearPlayersFourthStatsBox() - Will clear the box containing the Player's Weapon, Off-Hand and Armour of all text.
 
-10) UpdateInventory() - Will update the box containing the Player's Inventory using the 'Inventory' list in the static 'Player' class.
+10) UpdateInventoryBox() - Will update the box containing the Player's Inventory using the 'Inventory' list in the static 'Player'
+class.
 
-11) ClearInventory() - Will clear the box containing the Player's Inventory of all the text.
+11) ClearInventoryBox() - Will clear the box containing the Player's Inventory of all the text.
 
 12) UpdateFightOrderBox(List<string>) - Will update the box containing the fight order of PC and NPCs turns in a fight. Pass it a
 'List<string>' containing the PCs and NPCs in the fight order.
@@ -67,12 +68,22 @@ a'List<string> containing all the enemies for the encounter.
 
 17) ClearStoryBox() - Will clear the box containing the Story informing the Player of current story events of text.
 
-18) UpdatePlayerOptions(List<string>) - Will update the box containing the Players options for the current event. Pass it a
+18) UpdatePlayerOptionsBox(List<string>) - Will update the box containing the Players options for the current event. Pass it a
 'List<string>' containing all of the Player's options.
 
-19) ClearPlayerOptions() - Will clear the box containing the Players options for the current event of all text.
+19) ClearPlayerOptionsBox() - Will clear the box containing the Players options for the current event of all text.
 
 20) UpdateEventBox(List<string>) - Will update the box containing the games Events. Pass it a 'List<string>' containing the latest game
 events.
 
 21) ClearEventsBox() - Will Clear the box containing the games Events of all text.
+
+22) UpdatePlayersStatBoxes() - Calls all the Player update functions to update all the Player's stats on the console.
+
+23) ClearAllBoxes() - Calls all the Clear Boxes functions.
+
+24) ClearPlayersStatBoxes() - Calls all the Clear Player Stat Boxes functions.
+
+25) ClearNPCBoxes() - Calls all the Clear NPCs Boxes functions.
+
+26) ClearGameBoxes() - Calls all the Clear Game Boxes functions.
