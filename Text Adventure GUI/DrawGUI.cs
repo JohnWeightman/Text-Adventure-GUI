@@ -26,7 +26,7 @@ namespace Text_Adventure_GUI
             DrawEnemiesBox();
             UpdateStoryBox(StartDisplay.StartStory);
             List<string> StartDisplayOptions = StartDisplay.StartOptions;
-            UpdatePlayerOptions(StartDisplayOptions);
+            UpdatePlayerOptionsBox(StartDisplayOptions);
             List<string> StartDisplayEvents = StartDisplay.StartEvents;
             UpdateEventBox(StartDisplayEvents);
         }
@@ -41,6 +41,48 @@ namespace Text_Adventure_GUI
             Draw.RectangleFromTop(61, 9, 85, 39, ConsoleColor.Blue);
             Console.SetCursorPosition(74, 2);
             Console.Write("Text Adventure GUI"); 
+        }
+
+        #endregion
+
+        #region Additional Functions
+
+        public static void UpdatePlayersStatBoxes()
+        {
+            UpdatePlayersFirstStatsBox();
+            UpdatePlayersSecondStatsBox();
+            UpdatePlayersThirdStatsBox();
+            UpdatePlayersFourthStatsBox();
+            UpdateInventoryBox();
+        }
+
+        public static void ClearAllBoxes()
+        {
+            ClearPlayersStatBoxes();
+            ClearNPCBoxes();
+            ClearGameBoxes();
+        }
+
+        public static void ClearPlayersStatBoxes()
+        {
+            ClearPlayersFirstStatsBox();
+            ClearPlayersSecondStatsBox();
+            ClearPlayersThirdStatsBox();
+            ClearPlayersFourthStatsBox();
+            ClearInventoryBox();
+        }
+
+        public static void ClearNPCBoxes()
+        {
+            ClearFightOrderBox();
+            ClearEnemiesBox();
+        }
+
+        public static void ClearGameBoxes()
+        {
+            ClearStoryBox();
+            ClearPlayerOptionsBox();
+            ClearEventsBox();
         }
 
         #endregion
@@ -182,12 +224,12 @@ namespace Text_Adventure_GUI
         static void DrawPlayersFifthStatsBox() //Draws the Players fifth stats box
         {
             Draw.Rectangle(20, 26, 2, 1, Draw.DrawKind.BelowCursorButKeepCursorLocation, color: ConsoleColor.Green);
-            UpdateInventory();
+            UpdateInventoryBox();
         }
 
-        public static void UpdateInventory() //Updates the Players Inventory box
+        public static void UpdateInventoryBox() //Updates the Players Inventory box
         {
-            ClearInventory();
+            ClearInventoryBox();
             Console.SetCursorPosition(4, 22);
             Console.Write("Inventory");
             int YPos = 24;
@@ -199,7 +241,7 @@ namespace Text_Adventure_GUI
             }
         }
 
-        public static void ClearInventory() //Clears the Players Inventory box
+        public static void ClearInventoryBox() //Clears the Players Inventory box
         {
             for (int YPos = 22; YPos < 48; YPos++)
             {
@@ -365,9 +407,9 @@ namespace Text_Adventure_GUI
 
         #region Player Options Box
 
-        public static void UpdatePlayerOptions(List<string> Options) //Updates the Players Options box
+        public static void UpdatePlayerOptionsBox(List<string> Options) //Updates the Players Options box
         {
-            ClearPlayerOptions();
+            ClearPlayerOptionsBox();
             int YPos = 41;
             int OptionNum = 1;
             bool Left = true;
@@ -395,7 +437,7 @@ namespace Text_Adventure_GUI
             }
         }
 
-        public static void ClearPlayerOptions() //Clears the Players Option box
+        public static void ClearPlayerOptionsBox() //Clears the Players Option box
         {
             for (int YPos = 41; YPos < 49; YPos++)
             {
