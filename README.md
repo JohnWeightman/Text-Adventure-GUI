@@ -1,6 +1,8 @@
-ISTALRI SKOLIR PRODUCTIONS
+# ISTALRI SKOLIR PRODUCTIONS
 
 # Text-Adventure-GUI
+The code from this project is from the Text-Adventure-Environment project.
+
 Draws boxes to a console with different player stats, fight orders, story text, etc. Has public functions to update the display
 
 This code utilizes a 'Draw'class made by Ryan S White, link to the original page: https://www.codeproject.com/Tips/1091249/Drawing-a
