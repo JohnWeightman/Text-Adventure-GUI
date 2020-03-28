@@ -291,7 +291,7 @@ namespace Text_Adventure_GUI
 
         public static void UpdateStoryBox(List<string> StoryStrings) //Updates the Story box
         {
-            ClearStory();
+            ClearStoryBox();
             int YPos = 6;
             foreach (string StoryString in StoryStrings)
             {
@@ -349,7 +349,7 @@ namespace Text_Adventure_GUI
             return Story;
         }
 
-        public static void ClearStory() //Clears the story box
+        public static void ClearStoryBox() //Clears the story box
         {
             for (int YPos = 6; YPos < 39; YPos++)
             {
