@@ -30,29 +30,49 @@ correct information.
 
 2) UpdatePlayersFirstStatsBox() - Will update the box containing the Player's Name, Level, Hit Points and Armour Class using the'Name',
 'Level', 'HP', 'MaxHP' and 'AC' variables in the static 'Player' class.
-                                    
-3) UpdatePlayersSecondStatsBox() - Will update the box containing the Player's Strength, Dexterity and Constition using the 'Str', 'Dex'
+
+3) ClearPlayersFirstStatsBox() - Will clear the box containing the Player's Name, Level, Hit Points and Armour Class of all text.
+
+4) UpdatePlayersSecondStatsBox() - Will update the box containing the Player's Strength, Dexterity and Constition using the 'Str', 'Dex'
 and 'Con' variables in the static 'Player'class.
-                                    
-4) UpdatePlayersThirdStatsBox() - Will update the box containing the Player's XP and XP needed for Next Level using the 'XP' and 'LU'
+
+5) ClearPlayersSecondStatsBox() - Will clear the box containing the Player's Strength, Dexterity and Constition of all text.
+
+6) UpdatePlayersThirdStatsBox() - Will update the box containing the Player's XP and XP needed for Next Level using the 'XP' and 'LU'
 variables in the static 'Player' class.
-                                    
-5) UpdatePlayersFourthStatsBox() - Will update the box containing the Player's Weapon, Off-Hand and Armour using the 'Weapon', 'OffHand'
+         
+7) ClearPlayersThirdStatsBox() - Will clear the box containing the Player's XP and XP needed for Next Level of all text.       
+         
+8) UpdatePlayersFourthStatsBox() - Will update the box containing the Player's Weapon, Off-Hand and Armour using the 'Weapon', 'OffHand'
 and 'Armour' variables in the static 'Player' class.
-                                    
-6) UpdateInventory() - Will update the box containing the Player's Inventory using the 'Inventory' list in the static 'Player' class.
 
-7) UpdateFightOrderBox(List<string>) - Will update the box containing the fight order of PC and NPCs turns in a fight. Pass it a
-  'List<string>' containing the PCs and NPCs in the fight order.
-  
-8) UpdateEnemiesBox(List<string>)- Will update the box containing the NPCs that the Player is currently fighting. Pass it a'List<string>
-containing all the enemies for the encounter.
-  
-9) UpdateStoryBox(string) - Will update the box containing the Story informing the Player of current events. Pass it a 'string' to print
-to the box.
+9) ClearPlayersFourthStatsBox() - Will clear the box containing the Player's Weapon, Off-Hand and Armour of all text.
 
-10) UpdatePlayerOptions(List<string>) - Will update the box containing the Players options for the current event. Pass it a
+10) UpdateInventory() - Will update the box containing the Player's Inventory using the 'Inventory' list in the static 'Player' class.
+
+11) ClearInventory() - Will clear the box containing the Player's Inventory of all the text.
+
+12) UpdateFightOrderBox(List<string>) - Will update the box containing the fight order of PC and NPCs turns in a fight. Pass it a
+'List<string>' containing the PCs and NPCs in the fight order.
+
+13) ClearFightOrderBox() - Will clear the box containing the fight order of all the text.
+
+14) UpdateEnemiesBox(List<string>)- Will update the box containing the NPCs that the Player is currently fighting. Pass it
+a'List<string> containing all the enemies for the encounter.
+
+15) ClearEnemiesBox() - Will clear the box containing the NPC's that the Player is currently fighting of all text.
+
+16) UpdateStoryBox(List<string>) - Will update the box containing the Story informing the Player of current story events. Pass it a
+'List<string>' to print to the box.
+
+17) ClearStoryBox() - Will clear the box containing the Story informing the Player of current story events of text.
+
+18) UpdatePlayerOptions(List<string>) - Will update the box containing the Players options for the current event. Pass it a
 'List<string>' containing all of the Player's options.
 
-11) UpdateEventBox(List<string>) - Will update the box containing the games Events. Pass it a 'List<string>' containing the latest game
+19) ClearPlayerOptions() - Will clear the box containing the Players options for the current event of all text.
+
+20) UpdateEventBox(List<string>) - Will update the box containing the games Events. Pass it a 'List<string>' containing the latest game
 events.
+
+21) ClearEventsBox() - Will Clear the box containing the games Events of all text.
